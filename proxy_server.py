@@ -64,8 +64,6 @@ def handle_proxy(conn, proxyEnd):
     full_data = conn.recv(BUFFER_SIZE)
     time.sleep(0.5)
     proxyEnd.sendall(full_data)
-    #shut down
-    # conn.shutdown(socket.SHUT_WR)
     #receive response
     data = proxyEnd.recv(BUFFER_SIZE)
     #send data back
